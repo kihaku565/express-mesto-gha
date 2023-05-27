@@ -9,7 +9,7 @@
     "dev": "nodemon app.js",
     "lint": "npx eslint ."
   },
-  "author": "Matyushkin",
+  "author": "MatyushkinV",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.41.0",
