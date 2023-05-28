@@ -1,12 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const router = require('./routes/routes');
 
 const { PORT = 3000 } = process.env; // Слушаем 3000 порт
 const app = express();
 
-app.use(bodyParser.json()); // для собирания JSON-формата
+app.use(express.json()); // для собирания JSON-формата
 
 // временное решение регистрации, позже уберём
 app.use((req, res, next) => {
