@@ -21,8 +21,10 @@
 
 ## Запуск проекта
 
-`npm i` — установка зависимостей;
-`mongod` — запускает mongodDB;
-`npm run lint` — запускает линтер;
-`npm run start` — запускает сервер;
-`npm run dev` — запускает сервер с hot-reload и отладчиком кода.
+`npm i` — установка зависимостей  
+`mongod` — запускает mongodDB  
+`npm run lint` — запускает линтер  
+`npm run start` — запускает сервер  
+`npm run dev` — запускает сервер с hot-reload и отладчиком кода  
+
+https://github.com/kihaku565/express-mesto-gha
