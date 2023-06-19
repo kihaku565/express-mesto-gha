@@ -7,6 +7,7 @@ const rateLimit = require('express-rate-limit');
 const { errors } = require('celebrate');
 const router = require('./routes/routes');
 const errorHandler = require('./middlewares/error-handler');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { PORT = 3000 } = process.env; // Слушаем 3000 порт
 
@@ -24,9 +25,14 @@ app.use(limiter); // подключаем rate-limiter
 
 app.use(express.json()); // для собирания JSON-формата
 
+app.use(requestLogger); // подключаем логгер запросов
+
 app.use(router);
+
+app.use(errorLogger); // подключаем логгер ошибок
+
 app.use(errors()); // обработчик ошибок celebrate
-app.use(errorHandler); // мидлвара централизованного обработчика ошибок
+app.use(errorHandler); // централизованный обработчик ошибок
 
 mongoose.connect('mongodb://127.0.0.1/mestodb');
 
