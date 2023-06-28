@@ -1,7 +1,3 @@
-// файл .env не выгружаю, но в нем записаны следующие данные:
-// NODE_ENV=production
-// JWT_SECRET = 'a4768f7eb2a93f64b0dcbc8998e135d1b14bf747b52ba2a7aaf11a2fe34cb2b0'
-
 const { NODE_ENV, JWT_SECRET = 'dev-key' } = process.env;
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
